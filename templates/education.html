@@ -1,0 +1,23 @@
+<div class='container' id='schoolDiv'>
+	<h1>Education</h1>
+	<div class='row' id='schools'>
+		<div ng-repeat='school in schoolInfo' class='col-xs-12 col-sm-4'>
+			<img class='schoolPic' ng-src="{{school.img}}">
+			<div class='schoolDetails'>
+				<h2 class='schoolName'>{{school.name}}</h2>
+				<p>{{school.city + ', ' + school.state}}</p>
+				<p>{{school.start + ' - ' + school.end}}</p>
+				<p>GPA: {{school.gpa}}</p>
+				<p>{{school.degree}}</p>
+			</div>
+		</div>
+	</div>
+	<h1>Classes</h1>
+	<div class='row' id='classes'>
+		<div ng-repeat='class in classInfo' class='course col-xs-6 col-sm-4 col-md-2'>
+			<div class='courseBubble'>
+				<h2 class='classTitle'>{{class.school + ' ' + class.num}}</h2>
+			</div>
+		</div>
+	</div>
+</div>

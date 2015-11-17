@@ -1,0 +1,3 @@
+[{"name":"University of Washington","city":"Seattle","state":"Washington","start":2012,"end":2017,"gpa":3.52,"degree":"Informatics Major and Math Minor","img":"images/uw.jpg"},
+{"name":"Everett Community College","city":"Everett","state":"Washington","start":2010,"end":2012,"gpa":3.86,"degree":"Associates of Arts and Science","img":"images/everett.jpg"},
+{"name":"Marysville-Pilchuck High School","city":"Marysville","state":"Washington","start":2008,"end":2012,"gpa":3.997,"degree":"High School Diploma","img":"images/mp.jpg"}]
