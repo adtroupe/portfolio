@@ -1,0 +1,13 @@
+<div class='container' id='workDiv'>
+	<h2>Work Experience</h2>
+	<div ng-repeat='job in workInfo' class='job'>
+		<img ng-src="{{job.companyPic}}" class='companyPic'>
+		<div class='workText'>
+			<h3>{{job.employer}}</h3>
+			<p>{{job.dept + ' - ' + job.title}}</p>
+			<ul>
+				<li ng-repeat='task in job.tasks'>{{task}}</li>
+			</ul>
+		</div>
+	</div>
+</div>

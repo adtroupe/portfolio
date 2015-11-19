@@ -2,12 +2,24 @@ body {
 	background-image: url('images/mountain-lg.jpg');
 	background-repeat: no-repeat;
 	background-attachment: fixed;
-	
+	font-family: 'Montserrat', sans-serif;
+	font-variant: small-caps;
+}
+
+h1 {
+	font-weight: bold;
+}
+
+h2 {
+	font-family: 'Droid Serif', serif;
+	text-align: center;
+	font-variant: normal;
+	font-size: 40px;
 }
 
 .navbar {
 	min-height: 3em;
-	background: transparent;
+	background-color: transparent;
 	border-width: 0;
 }
 
@@ -41,7 +53,7 @@ body {
 .inner {
 	margin-left: auto;
 	margin-right: auto;
-	width: 550px;
+	width: 600px;
 }
 
 #profilePic {
@@ -55,8 +67,12 @@ body {
 	padding-left: 2em;
 }
 
-#schoolDiv, #schools {
+#schools {
 	margin-top: 50px;
+}
+
+#schoolDiv, #workDiv, #contactDiv {
+	margin-top: 100px;
 }
 
 .schoolPic {
@@ -70,7 +86,8 @@ body {
 .schoolDetails {
 	margin-top: 1em;
 	padding: 1.5em;
-	background-color: rgba(204, 204, 204, 0.4);
+	background-color: rgba(237, 245, 243, 0.4);
+	border-radius: 20%;
 }
 
 .schoolName {
@@ -78,7 +95,52 @@ body {
 	text-align: center;
 }
 
+#classForm {
+	text-align: center;
+}
+
+.course {
+	margin-top: 1em;
+	margin-bottom: 1em;
+	background-color: rgba(204, 204, 204, 0.5);
+}
+
 .classTitle {
 	font-size: 14px;
 	text-align: center;
 }
+
+.job {
+	max-width: 100%;
+	margin-top: 30px;
+	margin-bottom: 20px;
+}
+
+.companyPic {
+	border-radius: 50%;
+	max-width: 250px;
+	margin-right: 25px;
+	max-width: 25%;
+}
+
+.workText {
+	display: inline-block;
+	max-width: 70%;
+	vertical-align: middle;
+}
+
+#contactText {
+	padding-left: 20%;
+	padding-right: 20%;
+	font-size: 20px;
+	margin-top: 20px;
+}
+
+.contactOptions {
+	font-size: 16px;
+}
+
+#or {
+	text-align: center;
+}
+

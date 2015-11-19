@@ -1,10 +1,10 @@
 <div class='container' id='schoolDiv'>
-	<h1>Education</h1>
+	<h2>Education</h2>
 	<div class='row' id='schools'>
 		<div ng-repeat='school in schoolInfo' class='col-xs-12 col-sm-4'>
 			<img class='schoolPic' ng-src="{{school.img}}">
 			<div class='schoolDetails'>
-				<h2 class='schoolName'>{{school.name}}</h2>
+				<h3 class='schoolName'>{{school.name}}</h3>
 				<p>{{school.city + ', ' + school.state}}</p>
 				<p>{{school.start + ' - ' + school.end}}</p>
 				<p>GPA: {{school.gpa}}</p>
@@ -12,11 +12,28 @@
 			</div>
 		</div>
 	</div>
-	<h1>Classes</h1>
+	<h2>Classes</h2>
+	<form id='classForm'>
+		<div class='form-group'>
+			<input type='radio' ng-model='classCategory' value='all' checked='checked' />
+			<label for='none'>All</label>
+			<input type='radio' ng-model='classCategory' value='info' />
+			<label for='info'>Informatics</label>
+			<input type='radio' ng-model='classCategory' value='cse' />
+			<label for='cse'>Computer Science</label>
+			<input type='radio' ng-model='classCategory' value='math' />
+			<label for='math'>Math</label>
+		</div>
+	</form>
+
+<!-- 	<div>
+		<button ng-repeat='button in buttons' ng-click='classCategory = {{button.filterName}}'>{{button.displayName}}</button>
+	</div> -->
+
 	<div class='row' id='classes'>
-		<div ng-repeat='class in classInfo' class='course col-xs-6 col-sm-4 col-md-2'>
-			<div class='courseBubble'>
-				<h2 class='classTitle'>{{class.school + ' ' + class.num}}</h2>
+		<div ng-repeat='class in classInfo' ng-if='(classCategory.toUpperCase() == class.school || classCategory.toUpperCase() == "ALL")' class='course col-xs-6 col-sm-4 col-md-3'>
+			<div class='courseBubble' >
+				<h3 class='classTitle'>{{class.school + ' ' + class.num}}</h3>
 			</div>
 		</div>
 	</div>

@@ -36,20 +36,60 @@ myApp.config(function($stateProvider) {
 
 })
 
-.controller('EducationController', function($scope, $http) {
+.controller('EducationController', function($scope, $http, $filter) {
 	$http.get('data/school-info.json').success(function(response) {
 		$scope.schoolInfo = response;
 	})
 	$http.get('data/class-info.json').success(function(response) {
 		$scope.classInfo = response;
 	})
+	// $scope.selectedType = document.querySelector('input[name="classCategory"]:checked').value.toUpperCase();
+
+	$scope.buttons = [
+		{
+			displayName: 'All',
+			filterName: ''
+		},
+		{
+			displayName: 'Informatics',
+			filterName: 'INFO'
+		},
+		{
+			displayName: 'Computer Science',
+			filterName: 'CSE'
+		},
+		{
+			displayName: 'Mathematics',
+			filterName: 'MATH'
+		}
+	];
+	$scope.classCategory = '';
 })
 
-.controller('WorkController', function($scope) {
-
+.controller('WorkController', function($scope, $http) {
+	$http.get('data/work-info.json').success(function(response) {
+		$scope.workInfo = response;
+	})
 })
 
 .controller('ContactController', function($scope) {
 
 });	
 
+$(document).ready(function() {
+	var scroll_pos = 0;
+	$(document).scroll(function() {
+		scroll_pos = $(this).scrollTop();
+		if (scroll_pos > 75) {
+			// $('.navbar').css('background-color', 'rgba(204, 204, 204, 0.9)');
+			$('.navbar').animate({
+				backgroundColor: "rgba(237, 245, 243, 0.9)"
+			}, 250);
+		} else {
+			// $('.navbar').css('background-color', 'transparent');
+			$('.navbar').animate({
+				backgroundColor: 'transparent'
+			}, 250);
+		}
+	});
+});
