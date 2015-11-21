@@ -4,7 +4,10 @@
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>ADT</title>
+    <title>Alex Troupe</title>
+    <link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32" />
+	<link rel="icon" type="image/png" href="images/favicon-16x16.png" sizes="16x16" />
+
 
 	<script src="https://code.jquery.com/jquery.min.js"></script>
 	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
@@ -22,17 +25,27 @@
 <body>
 	<nav class='navbar navbar-default navbar-fixed-top'>
 		<div class='container-fluid' id='navbarItems'>
+			<div class='btn-group' id='dropdownMenuButton'>
+				<button type='button' class='btn dropdown-toggle' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>+</button>
+				<ul class='dropdown-menu dropdown-menu-right' id='dropdown'>
+					<li><a ui-sref='home'>Home</a></li>
+					<li><a ui-sref='about'>About</a></li>
+					<li><a ui-sref='education'>Education</a></li>
+					<li><a ui-sref='work'>Work</a></li>
+					<li><a ui-sref='contact'>Contact</a></li>
+				</ul>
+			</div>
 			<div class='navbar-header'>	
-				<a ui-sref='home'>Home</a>
-				<a ui-sref='about'>About</a>
-				<a ui-sref='education'>Education</a>
-				<a ui-sref='work'>Work</a>
-				<a ui-sref='contact'>Contact</a>
+				<a ui-sref='home' class='navbarLink'>Home</a>
+				<a ui-sref='about' class='navbarLink'>About</a>
+				<a ui-sref='education' class='navbarLink'>Education</a>
+				<a ui-sref='work' class='navbarLink'>Work</a>
+				<a ui-sref='contact' class='navbarLink'>Contact</a>
 			</div>
 		</div>
 	</nav>
 
-	<div class='container-fluid'>
+	<div class='container-fluid' id='changingContent'>
 		<div ui-view></div>
 	</div>
 </body>

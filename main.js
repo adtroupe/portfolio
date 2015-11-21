@@ -43,27 +43,12 @@ myApp.config(function($stateProvider) {
 	$http.get('data/class-info.json').success(function(response) {
 		$scope.classInfo = response;
 	})
-	// $scope.selectedType = document.querySelector('input[name="classCategory"]:checked').value.toUpperCase();
+	$scope.classCategory = 'ALL'
 
-	$scope.buttons = [
-		{
-			displayName: 'All',
-			filterName: ''
-		},
-		{
-			displayName: 'Informatics',
-			filterName: 'INFO'
-		},
-		{
-			displayName: 'Computer Science',
-			filterName: 'CSE'
-		},
-		{
-			displayName: 'Mathematics',
-			filterName: 'MATH'
-		}
-	];
-	$scope.classCategory = '';
+	$(function () {
+  		
+	})
+
 })
 
 .controller('WorkController', function($scope, $http) {
@@ -74,6 +59,12 @@ myApp.config(function($stateProvider) {
 
 .controller('ContactController', function($scope) {
 
+})
+
+.directive('popover', function(){
+	return function(scope, elem) {
+		elem.popover();
+	}
 });	
 
 $(document).ready(function() {

@@ -12,28 +12,32 @@
 			</div>
 		</div>
 	</div>
-	<h2>Classes</h2>
-	<form id='classForm'>
-		<div class='form-group'>
-			<input type='radio' ng-model='classCategory' value='all' checked='checked' />
-			<label for='none'>All</label>
-			<input type='radio' ng-model='classCategory' value='info' />
-			<label for='info'>Informatics</label>
-			<input type='radio' ng-model='classCategory' value='cse' />
-			<label for='cse'>Computer Science</label>
-			<input type='radio' ng-model='classCategory' value='math' />
-			<label for='math'>Math</label>
-		</div>
-	</form>
+	<div id='classesDiv'>
+		<h2>Classes</h2>
+		<form id='classForm'>
+			<div class='form-group'>
+				<span class='classButton'>
+					<input type='radio' ng-model='classCategory' value='all' id='all' ng-checked='true'/>
+					<label for='all'>All</label>
+				</span>
+				<span class='classButton'>
+					<input type='radio' ng-model='classCategory' value='info' id='info'/>
+					<label for='info'>Informatics</label>
+				</span>
+				<span class='classButton'>
+					<input type='radio' ng-model='classCategory' value='cse' id='cse'/>
+					<label for='cse'>Computer Science</label>
+				</span>
+				<span class='classButton'>
+					<input type='radio' ng-model='classCategory' value='math' id='math'/>
+					<label for='math'>Math</label>
+				</span>
+			</div>
+		</form>
 
-<!-- 	<div>
-		<button ng-repeat='button in buttons' ng-click='classCategory = {{button.filterName}}'>{{button.displayName}}</button>
-	</div> -->
-
-	<div class='row' id='classes'>
-		<div ng-repeat='class in classInfo' ng-if='(classCategory.toUpperCase() == class.school || classCategory.toUpperCase() == "ALL")' class='course col-xs-6 col-sm-4 col-md-3'>
-			<div class='courseBubble' >
-				<h3 class='classTitle'>{{class.school + ' ' + class.num}}</h3>
+		<div class='row'>
+			<div ng-repeat='class in classInfo' ng-if ='(classCategory.toUpperCase() == class.school || classCategory.toUpperCase() == "ALL")' class='courses col-xs-6 col-sm-4 col-md-3'>
+				<a popover tabindex='0' class='course btn btn-default' role='button' data-toggle='popover' data-placement='top' data-trigger='focus' data-html='true' data-original-title='{{class.school + " " + class.num}}' data-content='<p>{{class.title}}</p><p>{{"Taken: " + class.quarter + " " + class.year}}</p><p>{{class.desc}}</p>'>{{class.school + ' ' + class.num}}</a>
 			</div>
 		</div>
 	</div>

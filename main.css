@@ -1,9 +1,100 @@
+@media screen and (max-width: 768px) {
+	#homeBlock > #namePic {
+		max-width: 80%;
+	}
+
+	.navbar-header>.navbarLink {
+		padding-left: 1em;
+		padding-right: 1em;
+	}	
+
+	#schoolDiv .schoolPic {
+		max-width: 50%;		
+	}
+
+	#schoolDiv .schoolDetails {
+		margin-left: 10%;
+		margin-right: 10%;
+	}
+
+	#companyPicDiv {
+		text-align: center;
+	}
+
+	#companyPicDiv>.companyPic {
+		max-width: 50%;
+		margin-right: 0;
+		margin-bottom: 10px;
+	}
+
+	#workDiv > .job {
+		margin-right: 0;
+		margin-left: 0;
+	}
+
+	#contactDiv p {
+		font-size: 16px;
+	}
+
+	#contactDiv #contactText {
+		padding-left: 10%;
+		padding-right: 10%;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	body h2 {
+		font-size: 32px;
+	}
+	
+	body h3 {
+		font-size: 18px;
+	}
+
+	body h4 {
+		font-size: 14px;
+	}
+
+	.navbarLink {
+		display: none;
+	}
+
+	.inner > #homeBlock > #namePic {
+		max-width: 100%;
+	}	
+
+	#schoolDiv .schoolDetails {
+		margin-left: 5%;
+		margin-right: 5%;
+	}
+
+	#workDiv li {
+		font-size: 13px;
+	}
+
+	#contactDiv p {
+		font-size: 14px;
+	}
+
+	#contactDiv #contactText {
+		padding-left: 5%;
+		padding-right: 5%;
+	}
+}
+
+@media screen and (min-width: 481px) {
+	#dropdownMenuButton {
+		display: none;
+	}
+}
+
 body {
 	background-image: url('images/mountain-lg.jpg');
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	font-family: 'Montserrat', sans-serif;
 	font-variant: small-caps;
+	padding-left: 0;
 }
 
 h1 {
@@ -26,16 +117,29 @@ h2 {
 .navbar-header {
 	text-align: center;
 	float: none;
+	margin-left: 0;
+	margin-top: 10px;
 }
 
-.navbar-header  > a {
+#dropdownMenuButton {
+	float: right;
+	margin-top: 4px;
+}
+
+#dropdown {
+	background-color: rgba(237, 245, 243, 0.9);
+	min-width: 0;
+}
+
+#dropdownMenuButton>button {
+	background-color: transparent;
+	border: 1px solid rgba(5, 5, 5, .3);
+	color: rgba(5, 5, 5, .4)
+}
+
+.navbarLink {
 	padding-left: 2em;
 	padding-right: 2em;
-	padding-top: 1em;
-}
-
-#navbarItems {
-	padding-top: 1em;
 }
 
 .outer {
@@ -43,6 +147,7 @@ h2 {
 	position: fixed;
 	height: 100%;
 	width: 100%;
+	margin-left: -15px;
 }
 
 .middle {
@@ -53,26 +158,51 @@ h2 {
 .inner {
 	margin-left: auto;
 	margin-right: auto;
-	width: 600px;
+	width: 50%;
 }
 
-#profilePic {
-	max-height: 250px;
+#namePic {
+	opacity: 0.5;
 	border-radius: 50%;
-	box-shadow: 3px 3px 1px rgba(5, 5, 5, 0.45);
+	max-width: 50%;
 }
 
-#homeTextBlock {
-	display: inline-block;
-	padding-left: 2em;
+#homeBlock {
+	text-align: center;
+}
+
+#picDiv {
+	text-align: center;
+}
+
+.mePic {
+	max-width: 100%;
+	border-radius: 50%;
+	box-shadow: 2px 2px 1px rgba(5, 5, 5, 0.45);
+	margin: 5px;
+}
+
+.mePic, .schoolPic, .companyPic {
+	box-shadow: 2px 2px 1px rgba(5, 5, 5, 0.45);
+}
+
+#aboutText {
+	padding: 1em;
+	margin-top: 2em;
+	margin-bottom: 2em;
 }
 
 #schools {
 	margin-top: 50px;
 }
 
-#schoolDiv, #workDiv, #contactDiv {
+#aboutDiv, #schoolDiv, #workDiv, #contactDiv {
 	margin-top: 100px;
+}
+
+#aboutText, .schoolDetails, #classesDiv, .workText, #contactContent {
+	border-radius: 15px;
+	background-color: rgba(237, 245, 243, 0.45);	
 }
 
 .schoolPic {
@@ -85,9 +215,8 @@ h2 {
 
 .schoolDetails {
 	margin-top: 1em;
-	padding: 1.5em;
-	background-color: rgba(237, 245, 243, 0.4);
-	border-radius: 20%;
+	margin-bottom: 1em;
+	padding: 1em;
 }
 
 .schoolName {
@@ -99,15 +228,39 @@ h2 {
 	text-align: center;
 }
 
-.course {
-	margin-top: 1em;
-	margin-bottom: 1em;
-	background-color: rgba(204, 204, 204, 0.5);
+.classButton {
+	margin-left: 1em;
+	margin-right: 1em;
+	display: inline-block;
+}
+
+#classesDiv {
+	margin-top: 50px;
+	margin-bottom: 50px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+.courses {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+	text-align: center;	
 }
 
 .classTitle {
+	padding: 0.75em;
+}
+
+.course {
 	font-size: 14px;
-	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	background-color: transparent;
+	border: 1px solid rgba(5, 5, 5, .3);
+}
+
+.popover, .popover-title {
+	background-color: rgba(237, 245, 243, 0.9);
 }
 
 .job {
@@ -120,27 +273,46 @@ h2 {
 	border-radius: 50%;
 	max-width: 250px;
 	margin-right: 25px;
-	max-width: 25%;
+	max-width: 100%;
 }
 
 .workText {
 	display: inline-block;
-	max-width: 70%;
+	max-width: 100%;
 	vertical-align: middle;
 }
 
 #contactText {
-	padding-left: 20%;
-	padding-right: 20%;
+	padding-left: 15%;
+	padding-right: 15%;
 	font-size: 20px;
 	margin-top: 20px;
+}
+
+#contactContent {
+	padding: 1em;
 }
 
 .contactOptions {
 	font-size: 16px;
 }
 
-#or {
+.contactCentered {
 	text-align: center;
 }
 
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
+}
