@@ -2,7 +2,8 @@
 var myApp = angular.module('myApp', ['ui.router']);
 
 //Configuring the app for the different states of the multipage layout
-myApp.config(function($stateProvider) {
+myApp.config(function($stateProvider, $urlRouterProvider) {
+	$urlRouterProvider.when('','/')
 	$stateProvider.state('home', {
 		url: '/',
 		templateUrl: 'templates/home.html',
