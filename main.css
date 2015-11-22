@@ -17,6 +17,19 @@
 		margin-right: 10%;
 	}
 
+	.courses .course {
+		margin-top: 2px;
+		margin-bottom: 2px;
+	}
+
+	.popoverCourseBody {
+		font-size: 12px;
+	}
+
+	.popoverCourseTitle, .popoverCourseTaken {
+		font-size: 13px;
+	}
+
 	#companyPicDiv {
 		text-align: center;
 	}
@@ -43,6 +56,10 @@
 }
 
 @media screen and (max-width: 480px) {
+	body {
+		background-image: url('images/mountain-md.jpg');		
+	}
+
 	body h2 {
 		font-size: 32px;
 	}
@@ -86,10 +103,18 @@
 	#dropdownMenuButton {
 		display: none;
 	}
+	body {
+		background-image: url('images/mountain-lg.jpg');
+	}
+}
+
+@media screen and (min-width: 1600px) {
+	body {
+		background-image: url('images/mountain-xl.jpg');
+	}
 }
 
 body {
-	background-image: url('images/mountain-lg.jpg');
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	font-family: 'Montserrat', sans-serif;
@@ -112,6 +137,7 @@ h2 {
 	min-height: 3em;
 	background-color: transparent;
 	border-width: 0;
+	z-index: 1001;
 }
 
 .navbar-header {
@@ -261,6 +287,10 @@ h2 {
 
 .popover, .popover-title {
 	background-color: rgba(237, 245, 243, 0.9);
+}
+
+.popoverCourseTitle {
+	font-weight: bold;
 }
 
 .job {

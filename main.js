@@ -75,12 +75,12 @@ $(document).ready(function() {
 			// $('.navbar').css('background-color', 'rgba(204, 204, 204, 0.9)');
 			$('.navbar').animate({
 				backgroundColor: "rgba(237, 245, 243, 0.9)"
-			}, 250);
+			}, 150);
 		} else {
 			// $('.navbar').css('background-color', 'transparent');
 			$('.navbar').animate({
 				backgroundColor: 'transparent'
-			}, 250);
+			}, 150);
 		}
 	});
 });
