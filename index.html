@@ -8,7 +8,6 @@
     <link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32" />
 	<link rel="icon" type="image/png" href="images/favicon-16x16.png" sizes="16x16" />
 
-
 	<script src="https://code.jquery.com/jquery.min.js"></script>
 	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>	
@@ -23,8 +22,10 @@
 </head>
 
 <body>
+	<!--navigation bar for the webpate-->
 	<nav class='navbar navbar-default navbar-fixed-top'>
 		<div class='container-fluid' id='navbarItems'>
+			<!--Dropdown menu button for small screens-->
 			<div class='btn-group' id='dropdownMenuButton'>
 				<button type='button' class='btn dropdown-toggle' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>+</button>
 				<ul class='dropdown-menu dropdown-menu-right' id='dropdown'>
@@ -35,6 +36,7 @@
 					<li><a ui-sref='contact'>Contact</a></li>
 				</ul>
 			</div>
+			<!--Regular menu buttons-->
 			<div class='navbar-header'>	
 				<a ui-sref='home' class='navbarLink'>Home</a>
 				<a ui-sref='about' class='navbarLink'>About</a>
@@ -44,10 +46,9 @@
 			</div>
 		</div>
 	</nav>
-
+	<!--Where template html code will be put-->
 	<div class='container-fluid' id='changingContent'>
 		<div ui-view></div>
 	</div>
 </body>
-
 </html>

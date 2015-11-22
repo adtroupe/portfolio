@@ -1,6 +1,8 @@
+<!--The content for the education page-->
 <div class='container' id='schoolDiv'>
 	<h2>Education</h2>
 	<div class='row' id='schools'>
+		<!--Puts the different school info in the DOM-->
 		<div ng-repeat='school in schoolInfo' class='col-xs-12 col-sm-4'>
 			<img class='schoolPic' ng-src="{{school.img}}">
 			<div class='schoolDetails'>
@@ -14,6 +16,7 @@
 	</div>
 	<div id='classesDiv'>
 		<h2>Classes</h2>
+		<!--The form to determine what kind of class is shown-->
 		<form id='classForm'>
 			<div class='form-group'>
 				<span class='classButton'>
@@ -36,6 +39,7 @@
 		</form>
 
 		<div class='row'>
+			<!--Puts the different courses taken in the DOM, also creates the popover element-->
 			<div ng-repeat='class in classInfo' ng-if ='(classCategory.toUpperCase() == class.school || classCategory.toUpperCase() == "ALL")' class='courses col-xs-6 col-sm-4 col-md-3'>
 				<a popover tabindex='0' class='course btn btn-default' role='button' data-toggle='popover' data-placement='top' data-trigger='focus' data-html='true' data-original-title='{{class.school + " " + class.num}}' data-content='<p class="popoverCourseTitle">{{class.title}}</p><p class="popoverCourseTaken">{{"Taken: " + class.quarter + " " + class.year}}</p><p class="popoverCourseBody">{{class.desc}}</p>'>{{class.school + ' ' + class.num}}</a>
 			</div>
