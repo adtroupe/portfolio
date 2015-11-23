@@ -58,7 +58,7 @@
 @media screen and (max-width: 480px) {
 	body {
 		background-image: url('images/mountain-md.jpg');
-		background-size: auto 100%;
+		background-size: auto;
 	}
 
 	body h2 {
