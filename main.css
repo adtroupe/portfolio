@@ -57,7 +57,7 @@
 
 @media screen and (max-width: 480px) {
 	body {
-		background-image: url('images/mountain-md.jpg');		
+		background-image: url('images/mountain-lg.jpg');		
 	}
 
 	body h2 {
@@ -106,7 +106,7 @@
 	}
 
 	body {
-		background-image: url('images/mountain-lg.jpg');
+		background-image: url('images/mountain-xl.jpg');
 	}
 }
 
