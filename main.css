@@ -57,7 +57,8 @@
 
 @media screen and (max-width: 480px) {
 	body {
-		background-image: url('images/mountain-md.jpg');		
+		background-image: url('images/mountain-md.jpg');
+		background-size: auto 100%;
 	}
 
 	body h2 {
@@ -107,6 +108,7 @@
 
 	body {
 		background-image: url('images/mountain-lg.jpg');
+		background-size: cover;
 	}
 }
 
@@ -123,7 +125,6 @@
 body {
 	background-repeat: no-repeat;
 	background-attachment: fixed;
-	background-size: cover;
 	font-family: 'Montserrat', sans-serif;
 	font-variant: small-caps;
 	padding-left: 0;
